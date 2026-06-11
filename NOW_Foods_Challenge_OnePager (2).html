@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>NOW Foods × TikTok Shop · Creator Challenge — One-Pager</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --now-red:#C8202F;--now-red-deep:#A11D26;
+  --leaf-green:#2D5F3F;--leaf-green-deep:#1F4A2C;--leaf-green-soft:#6FA572;--leaf-green-pale:#DCEBE0;
+  --cream:#FDF9F0;--cream-deep:#F5EFE0;--paper:#FFFFFF;
+  --charcoal:#1C2A1F;--charcoal-soft:#2D3D31;--pencil:#6B7268;--pencil-light:#B8BFB5;
+  --paper-line:#E6E1D2;--gold:#C7A961;
+  --display:'Outfit',-apple-system,sans-serif;--body:'Inter',-apple-system,sans-serif;
+  --mono:'JetBrains Mono',monospace;
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{background:#E8E2D0;font-family:var(--body);color:var(--charcoal);-webkit-font-smoothing:antialiased}
+
+@page{size:A4 portrait;margin:0}
+
+body{padding:20px;display:flex;justify-content:center;align-items:flex-start;min-height:100vh}
+
+.page{
+  width:210mm;
+  min-height:297mm;
+  background:var(--cream);
+  position:relative;
+  padding:14mm 14mm 12mm;
+  box-shadow:0 18px 50px rgba(0,0,0,0.15);
+  display:flex;
+  flex-direction:column;
+  gap:5mm;
+  overflow:hidden;
+}
+
+/* Decorative corner shape */
+.page::before{
+  content:'';
+  position:absolute;
+  top:-30mm;
+  right:-30mm;
+  width:140mm;
+  height:140mm;
+  background:radial-gradient(circle,rgba(45,95,63,0.06) 0%,transparent 65%);
+  pointer-events:none;
+}
+.page::after{
+  content:'';
+  position:absolute;
+  bottom:-40mm;
+  left:-30mm;
+  width:120mm;
+  height:120mm;
+  background:radial-gradient(circle,rgba(200,32,47,0.05) 0%,transparent 65%);
+  pointer-events:none;
+}
+
+/* HEADER */
+.head{
+  display:grid;
+  grid-template-columns:auto 1fr auto;
+  gap:8mm;
+  align-items:center;
+  padding-bottom:5mm;
+  border-bottom:1.5px solid var(--charcoal);
+  position:relative;
+}
+.brand{display:flex;align-items:center;gap:3mm}
+.logo{
+  width:16mm;height:16mm;border-radius:3mm;
+  background:linear-gradient(135deg,var(--now-red),var(--now-red-deep));
+  color:#FFF;display:flex;align-items:center;justify-content:center;
+  font-family:var(--display);font-weight:900;font-size:14pt;letter-spacing:-0.02em;
+  position:relative;box-shadow:0 3px 10px rgba(200,32,47,0.3);
+}
+.logo::after{
+  content:'';position:absolute;width:4.5mm;height:4.5mm;
+  background:var(--leaf-green-soft);
+  border-radius:50% 0 50% 50%;top:-1mm;right:-1mm;transform:rotate(-30deg);
+}
+.brand-text{display:flex;flex-direction:column;line-height:1.1}
+.brand-name{font-family:var(--display);font-size:13pt;font-weight:800;color:var(--charcoal);letter-spacing:-0.01em}
+.brand-tag{font-family:var(--mono);font-size:7pt;font-weight:600;color:var(--pencil);text-transform:uppercase;letter-spacing:0.14em;margin-top:1mm}
+.brand-tag b{color:var(--now-red);font-weight:700}
+
+.title-block{text-align:left;padding-left:5mm;border-left:2px solid var(--paper-line)}
+.title-eye{font-family:var(--mono);font-size:7pt;font-weight:600;color:var(--now-red);text-transform:uppercase;letter-spacing:0.16em;margin-bottom:1mm}
+.title-main{font-family:var(--display);font-size:13pt;font-weight:700;color:var(--charcoal);letter-spacing:-0.01em;line-height:1.15}
+.title-main em{font-style:italic;color:var(--now-red);font-weight:800}
+
+.prize{text-align:right}
+.prize-lbl{font-family:var(--mono);font-size:7pt;font-weight:600;color:var(--pencil);text-transform:uppercase;letter-spacing:0.16em;margin-bottom:0.5mm}
+.prize-num{font-family:var(--display);font-size:28pt;font-weight:900;color:var(--now-red);letter-spacing:-0.03em;line-height:1}
+.prize-sub{font-family:var(--mono);font-size:7pt;color:var(--pencil);text-transform:uppercase;letter-spacing:0.12em;margin-top:1mm}
+
+/* TAGLINE STRIP */
+.tagline{
+  background:var(--charcoal);
+  color:var(--cream);
+  padding:2.5mm 5mm;
+  border-radius:2mm;
+  font-family:var(--display);
+  font-size:9.5pt;
+  font-weight:600;
+  text-align:center;
+  letter-spacing:0.01em;
+  display:flex;
+  justify-content:center;
+  gap:5mm;
+  flex-wrap:wrap;
+  position:relative;
+  z-index:1;
+}
+.tagline span{display:inline-flex;align-items:center;gap:2mm}
+.tagline em{font-style:italic;color:var(--leaf-green-soft);font-weight:700}
+
+/* PATHWAY COLUMNS */
+.pathways{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:4mm;
+  position:relative;
+  z-index:1;
+}
+.path{
+  background:var(--paper);
+  border:1px solid var(--paper-line);
+  border-radius:2.5mm;
+  overflow:hidden;
+  display:flex;
+  flex-direction:column;
+}
+.path-band{
+  padding:3mm 4mm;
+  background:linear-gradient(135deg,var(--now-red),var(--now-red-deep));
+  color:#FFF;
+  position:relative;
+  overflow:hidden;
+}
+.path.green .path-band{background:linear-gradient(135deg,var(--leaf-green),var(--leaf-green-deep))}
+.path-band::before{
+  content:'';position:absolute;top:-50%;right:-20%;width:60%;height:200%;
+  background:radial-gradient(ellipse,rgba(255,255,255,0.12) 0%,transparent 60%);
+}
+.path-badge{
+  font-family:var(--mono);font-size:7pt;font-weight:700;
+  text-transform:uppercase;letter-spacing:0.14em;
+  color:rgba(255,255,255,0.85);margin-bottom:1mm;position:relative;
+}
+.path-title{
+  font-family:var(--display);font-size:14pt;font-weight:800;color:#FFF;
+  letter-spacing:-0.01em;line-height:1;position:relative;
+}
+.path-pool{
+  font-family:var(--mono);font-size:8pt;color:rgba(255,255,255,0.9);
+  margin-top:1.5mm;position:relative;text-transform:uppercase;letter-spacing:0.1em;
+}
+.path-pool b{font-family:var(--display);font-size:13pt;font-weight:900;color:#FFF;letter-spacing:-0.02em;margin-left:1mm}
+
+.path-prizes{padding:3mm 4mm;flex:1;display:flex;flex-direction:column;gap:2mm}
+.prize-row{
+  display:grid;
+  grid-template-columns:auto 1fr auto;
+  gap:3mm;
+  align-items:center;
+  padding:2.5mm 3mm;
+  background:var(--cream-deep);
+  border-radius:1.5mm;
+  border-left:3px solid var(--paper-line);
+}
+.prize-row.first{
+  background:linear-gradient(135deg,var(--now-red),var(--now-red-deep));
+  color:#FFF;
+  border-left-color:transparent;
+  box-shadow:0 2px 8px rgba(200,32,47,0.2);
+}
+.path.green .prize-row.first{background:linear-gradient(135deg,var(--leaf-green),var(--leaf-green-deep));box-shadow:0 2px 8px rgba(45,95,63,0.2)}
+.prize-medal{font-size:13pt;line-height:1}
+.prize-rank{font-family:var(--body);font-size:8pt;font-weight:600;color:var(--charcoal-soft);text-transform:uppercase;letter-spacing:0.06em;line-height:1.2}
+.prize-row.first .prize-rank{color:rgba(255,255,255,0.85)}
+.prize-rank b{font-family:var(--display);font-size:10pt;font-weight:700;color:var(--charcoal);display:block;margin-top:0.5mm}
+.prize-row.first .prize-rank b{color:#FFF}
+.prize-amount{font-family:var(--display);font-size:13pt;font-weight:900;color:var(--now-red);letter-spacing:-0.02em;line-height:1}
+.path.green .prize-amount{color:var(--leaf-green)}
+.prize-row.first .prize-amount{color:#FFF}
+
+.path-meta{padding:0 4mm 3mm;display:grid;grid-template-columns:1fr;gap:2mm}
+.path-meta-item{
+  padding:2.5mm 3mm;background:var(--cream-deep);border-radius:1.5mm;
+  border-left:3px solid var(--now-red);font-size:8pt;line-height:1.4;color:var(--charcoal-soft);
+}
+.path.green .path-meta-item{border-left-color:var(--leaf-green)}
+.path-meta-item.tie{border-left-color:var(--gold)}
+.path-meta-item h4{font-family:var(--display);font-size:8pt;font-weight:800;color:var(--charcoal);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:1mm;display:flex;align-items:center;gap:1.5mm}
+.path-meta-item h4 .ic{font-size:11pt;line-height:1}
+.path-meta-item b{font-weight:600;color:var(--charcoal)}
+
+/* DUAL BONUS */
+.dual{
+  background:linear-gradient(135deg,var(--gold) 0%,#a08545 100%);
+  color:#FFF;
+  border-radius:2.5mm;
+  padding:4mm 5mm;
+  position:relative;
+  overflow:hidden;
+  display:grid;
+  grid-template-columns:1.5fr 2.5fr 1fr;
+  gap:5mm;
+  align-items:center;
+}
+.dual::before{
+  content:'';position:absolute;top:-30%;right:-5%;width:40%;height:160%;
+  background:radial-gradient(ellipse,rgba(255,255,255,0.12) 0%,transparent 60%);
+}
+.dual-left{position:relative}
+.dual-eye{font-family:var(--mono);font-size:7pt;font-weight:700;color:rgba(255,255,255,0.85);text-transform:uppercase;letter-spacing:0.16em;margin-bottom:1mm}
+.dual-title{font-family:var(--display);font-size:14pt;font-weight:800;color:#FFF;line-height:1.1;letter-spacing:-0.01em;margin-bottom:1.5mm}
+.dual-title em{font-style:italic}
+.dual-cap{font-size:7.5pt;color:rgba(255,255,255,0.92);line-height:1.5}
+.dual-cap b{color:#FFF;font-weight:700}
+
+.dual-amounts{display:grid;grid-template-columns:repeat(3,1fr);gap:2mm;position:relative}
+.dual-amt{
+  background:rgba(255,255,255,0.15);
+  border:1px solid rgba(255,255,255,0.25);
+  border-radius:1.5mm;
+  padding:2.5mm 2mm;
+  text-align:center;
+  backdrop-filter:blur(4px);
+}
+.dual-amt-rank{font-family:var(--mono);font-size:6.5pt;font-weight:700;color:rgba(255,255,255,0.85);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:1mm}
+.dual-amt-val{font-family:var(--display);font-size:14pt;font-weight:900;color:#FFF;letter-spacing:-0.02em;line-height:1}
+.dual-amt-val .plus{font-size:0.55em;vertical-align:top;font-weight:700}
+
+.dual-max{position:relative;text-align:right}
+.dual-max-lbl{font-family:var(--mono);font-size:6.5pt;font-weight:700;color:rgba(255,255,255,0.85);text-transform:uppercase;letter-spacing:0.12em;margin-bottom:1mm}
+.dual-max-num{font-family:var(--display);font-size:22pt;font-weight:900;color:#FFF;letter-spacing:-0.03em;line-height:1}
+.dual-max-sub{font-family:var(--mono);font-size:6.5pt;color:rgba(255,255,255,0.85);text-transform:uppercase;letter-spacing:0.12em;margin-top:1mm}
+
+/* RULES + BUDGET ROW */
+.bottom-row{
+  display:grid;
+  grid-template-columns:1.4fr 1fr;
+  gap:4mm;
+  position:relative;
+  z-index:1;
+}
+
+.rules{
+  background:var(--paper);
+  border:1px solid var(--paper-line);
+  border-radius:2.5mm;
+  padding:3.5mm 4mm;
+}
+.rules-head{
+  font-family:var(--mono);font-size:7pt;font-weight:700;color:var(--now-red);
+  text-transform:uppercase;letter-spacing:0.16em;margin-bottom:2mm;
+  display:flex;align-items:center;gap:2mm;
+}
+.rules-head::after{content:'';flex:1;height:1px;background:var(--paper-line)}
+.rules-grid{display:grid;grid-template-columns:1fr 1fr;gap:2mm}
+.rule{
+  display:flex;align-items:flex-start;gap:2mm;
+  padding:2mm 2.5mm;
+  background:var(--cream-deep);
+  border-radius:1.5mm;
+  font-size:7.5pt;line-height:1.45;color:var(--charcoal-soft);
+}
+.rule-icon{
+  width:5mm;height:5mm;border-radius:1mm;flex-shrink:0;
+  background:var(--now-red);color:#FFF;display:flex;align-items:center;justify-content:center;
+  font-size:8pt;font-weight:700;
+}
+.rule-icon.green{background:var(--leaf-green)}
+.rule-icon.gold{background:var(--gold)}
+.rule-text b{color:var(--charcoal);font-weight:700;display:block;font-family:var(--display);font-size:8pt;letter-spacing:-0.005em;margin-bottom:0.5mm}
+
+.budget{
+  background:var(--paper);
+  border:1px solid var(--paper-line);
+  border-radius:2.5mm;
+  padding:3.5mm 4mm;
+  display:flex;
+  flex-direction:column;
+}
+.budget-head{
+  font-family:var(--mono);font-size:7pt;font-weight:700;color:var(--now-red);
+  text-transform:uppercase;letter-spacing:0.16em;margin-bottom:2mm;
+  display:flex;align-items:center;gap:2mm;
+}
+.budget-head::after{content:'';flex:1;height:1px;background:var(--paper-line)}
+
+.budget-bar{
+  height:8mm;display:flex;border-radius:1.5mm;overflow:hidden;margin-bottom:2mm;
+  box-shadow:0 1px 3px rgba(0,0,0,0.06);
+}
+.budget-seg{
+  display:flex;align-items:center;justify-content:center;
+  color:#FFF;font-family:var(--display);font-weight:800;font-size:9pt;
+  letter-spacing:-0.01em;
+}
+.budget-seg.red{background:linear-gradient(180deg,var(--now-red),var(--now-red-deep));flex:36}
+.budget-seg.green{background:linear-gradient(180deg,var(--leaf-green),var(--leaf-green-deep));flex:36}
+.budget-seg.gold{background:linear-gradient(180deg,var(--gold),#a08545);flex:28}
+.budget-legend{display:flex;flex-direction:column;gap:1mm;font-size:7.5pt;color:var(--charcoal-soft);line-height:1.3}
+.budget-leg{display:flex;align-items:center;gap:2mm;justify-content:space-between}
+.budget-leg-left{display:flex;align-items:center;gap:2mm}
+.budget-leg-dot{width:3mm;height:3mm;border-radius:0.5mm;flex-shrink:0}
+.budget-leg-dot.red{background:var(--now-red)}
+.budget-leg-dot.green{background:var(--leaf-green)}
+.budget-leg-dot.gold{background:var(--gold)}
+.budget-leg-val{font-family:var(--display);font-weight:800;color:var(--charcoal)}
+.budget-total{
+  margin-top:1.5mm;padding-top:1.5mm;border-top:1px dashed var(--paper-line);
+  display:flex;justify-content:space-between;align-items:baseline;
+}
+.budget-total-lbl{font-family:var(--mono);font-size:7pt;font-weight:700;color:var(--charcoal);text-transform:uppercase;letter-spacing:0.12em}
+.budget-total-val{font-family:var(--display);font-size:13pt;font-weight:900;color:var(--now-red);letter-spacing:-0.02em}
+
+/* FOOTER */
+.foot{
+  display:flex;justify-content:space-between;align-items:center;gap:5mm;
+  padding-top:2mm;border-top:1px solid var(--paper-line);
+  font-family:var(--mono);font-size:6.5pt;color:var(--pencil);
+  text-transform:uppercase;letter-spacing:0.12em;
+  position:relative;z-index:1;
+}
+.foot b{color:var(--charcoal);font-weight:700}
+.foot-mid{display:flex;align-items:center;gap:2mm}
+.foot-dot{width:4px;height:4px;border-radius:50%;background:var(--leaf-green-soft)}
+
+/* PRINT */
+@media print{
+  html,body{background:#FFF;padding:0;margin:0}
+  body{padding:0;display:block}
+  .page{box-shadow:none;margin:0;width:210mm;height:297mm;page-break-after:avoid}
+}
+
+/* SCREEN BACKDROP DECORATION */
+@media screen{
+  body{padding:30px 20px}
+}
+
+/* SMALL SCREEN PREVIEW */
+@media(max-width:850px){
+  body{padding:14px 10px;align-items:flex-start}
+  .page{
+    width:100%;
+    min-height:auto;
+    padding:18px 16px;
+    transform:scale(1);
+    transform-origin:top center;
+  }
+  .head{grid-template-columns:1fr;gap:10px;text-align:center}
+  .brand,.title-block,.prize{justify-content:center;text-align:center}
+  .title-block{padding-left:0;border-left:none;border-top:1px solid var(--paper-line);padding-top:10px}
+  .prize{text-align:center}
+  .pathways{grid-template-columns:1fr;gap:10px}
+  .dual{grid-template-columns:1fr;gap:12px;text-align:center}
+  .dual-max{text-align:center}
+  .bottom-row{grid-template-columns:1fr;gap:10px}
+  .rules-grid{grid-template-columns:1fr}
+  .tagline{flex-direction:column;gap:4px;font-size:10pt}
+  .prize-num{font-size:36pt}
+  .foot{flex-direction:column;gap:6px;text-align:center}
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- HEADER -->
+  <div class="head">
+    <div class="brand">
+      <div class="logo">NOW</div>
+      <div class="brand-text">
+        <div class="brand-name">NOW Foods</div>
+        <div class="brand-tag"><b>×</b> TikTok Shop</div>
+      </div>
+    </div>
+    <div class="title-block">
+      <div class="title-eye">Creator Challenge · One-Pager</div>
+      <div class="title-main">Two pathways to win. <em>One total</em> prize pool.</div>
+    </div>
+    <div class="prize">
+      <div class="prize-lbl">Total Prize Pool</div>
+      <div class="prize-num">$25,000</div>
+      <div class="prize-sub">2 Pathways · 3 Winners Each</div>
+    </div>
+  </div>
+
+  <!-- TAGLINE -->
+  <div class="tagline">
+    <span>🎬 Compete on <em>video volume</em></span>
+    <span>💰 Or <em>highest GMV</em></span>
+    <span>🏆 Win in <em>both</em> — earn the dual bonus</span>
+  </div>
+
+  <!-- PATHWAYS -->
+  <div class="pathways">
+
+    <div class="path">
+      <div class="path-band">
+        <div class="path-badge">🎬 Pathway 01</div>
+        <div class="path-title">Video Volume</div>
+        <div class="path-pool">Prize Pool <b>$9,000</b></div>
+      </div>
+      <div class="path-prizes">
+        <div class="prize-row first">
+          <span class="prize-medal">🏆</span>
+          <span class="prize-rank">1st Place<b>Most qualifying videos</b></span>
+          <span class="prize-amount">$5,000</span>
+        </div>
+        <div class="prize-row">
+          <span class="prize-medal">🥈</span>
+          <span class="prize-rank">2nd Place<b>2nd most videos</b></span>
+          <span class="prize-amount">$2,500</span>
+        </div>
+        <div class="prize-row">
+          <span class="prize-medal">🥉</span>
+          <span class="prize-rank">3rd Place<b>3rd most videos</b></span>
+          <span class="prize-amount">$1,500</span>
+        </div>
+      </div>
+      <div class="path-meta">
+        <div class="path-meta-item">
+          <h4><span class="ic">📊</span>Ranked by</h4>
+          Number of <b>qualifying shoppable videos</b> posted during the challenge window.
+        </div>
+        <div class="path-meta-item tie">
+          <h4><span class="ic">⚖️</span>Tiebreaker</h4>
+          <b>Highest views on most recent video</b> wins.
+        </div>
+      </div>
+    </div>
+
+    <div class="path green">
+      <div class="path-band">
+        <div class="path-badge">💰 Pathway 02</div>
+        <div class="path-title">Highest GMV Driver</div>
+        <div class="path-pool">Prize Pool <b>$9,000</b></div>
+      </div>
+      <div class="path-prizes">
+        <div class="prize-row first">
+          <span class="prize-medal">🏆</span>
+          <span class="prize-rank">1st Place<b>Highest attributed GMV</b></span>
+          <span class="prize-amount">$5,000</span>
+        </div>
+        <div class="prize-row">
+          <span class="prize-medal">🥈</span>
+          <span class="prize-rank">2nd Place<b>2nd highest GMV</b></span>
+          <span class="prize-amount">$2,500</span>
+        </div>
+        <div class="prize-row">
+          <span class="prize-medal">🥉</span>
+          <span class="prize-rank">3rd Place<b>3rd highest GMV</b></span>
+          <span class="prize-amount">$1,500</span>
+        </div>
+      </div>
+      <div class="path-meta">
+        <div class="path-meta-item">
+          <h4><span class="ic">📊</span>Ranked by</h4>
+          Total <b>attributed gross merchandise value</b> generated during the challenge window.
+        </div>
+        <div class="path-meta-item tie">
+          <h4><span class="ic">⚖️</span>Tiebreaker</h4>
+          <b>Earliest video posted date</b> wins.
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- DUAL BONUS -->
+  <div class="dual">
+    <div class="dual-left">
+      <div class="dual-eye">⭐ Bonus Pool · $7,000</div>
+      <div class="dual-title">Win in <em>both</em> pathways</div>
+      <div class="dual-cap">Top 3 in <b>both pathways</b>? Earn both individual prizes <b>plus</b> a dual-winner bonus stacked on top.</div>
+    </div>
+    <div class="dual-amounts">
+      <div class="dual-amt">
+        <div class="dual-amt-rank">Dual #1</div>
+        <div class="dual-amt-val"><span class="plus">+$</span>4,000</div>
+      </div>
+      <div class="dual-amt">
+        <div class="dual-amt-rank">Dual #2</div>
+        <div class="dual-amt-val"><span class="plus">+$</span>2,000</div>
+      </div>
+      <div class="dual-amt">
+        <div class="dual-amt-rank">Dual #3</div>
+        <div class="dual-amt-val"><span class="plus">+$</span>1,000</div>
+      </div>
+    </div>
+    <div class="dual-max">
+      <div class="dual-max-lbl">Max possible</div>
+      <div class="dual-max-num">$14,000</div>
+      <div class="dual-max-sub">1st + 1st + Dual #1</div>
+    </div>
+  </div>
+
+  <!-- BOTTOM ROW: Rules + Budget -->
+  <div class="bottom-row">
+
+    <div class="rules">
+      <div class="rules-head">Rules to Compete</div>
+      <div class="rules-grid">
+        <div class="rule">
+          <div class="rule-icon">🎬</div>
+          <div class="rule-text"><b>Minimum 3 videos</b>3 qualifying shoppable videos to be eligible.</div>
+        </div>
+        <div class="rule">
+          <div class="rule-icon green">🏷️</div>
+          <div class="rule-text"><b>Product tag required</b>Must tag a NOW Foods TikTok Shop product.</div>
+        </div>
+        <div class="rule">
+          <div class="rule-icon gold">⚖️</div>
+          <div class="rule-text"><b>Tie · Video Volume</b>Highest views on most recent video wins.</div>
+        </div>
+        <div class="rule">
+          <div class="rule-icon gold">⚖️</div>
+          <div class="rule-text"><b>Tie · GMV</b>Earliest video posted date wins.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="budget">
+      <div class="budget-head">Budget Breakdown</div>
+      <div class="budget-bar">
+        <div class="budget-seg red">$9K</div>
+        <div class="budget-seg green">$9K</div>
+        <div class="budget-seg gold">$7K</div>
+      </div>
+      <div class="budget-legend">
+        <div class="budget-leg">
+          <div class="budget-leg-left"><span class="budget-leg-dot red"></span><span>Video Volume</span></div>
+          <span class="budget-leg-val">$9,000</span>
+        </div>
+        <div class="budget-leg">
+          <div class="budget-leg-left"><span class="budget-leg-dot green"></span><span>Highest GMV</span></div>
+          <span class="budget-leg-val">$9,000</span>
+        </div>
+        <div class="budget-leg">
+          <div class="budget-leg-left"><span class="budget-leg-dot gold"></span><span>Dual Bonus</span></div>
+          <span class="budget-leg-val">$7,000</span>
+        </div>
+      </div>
+      <div class="budget-total">
+        <span class="budget-total-lbl">Total Pool</span>
+        <span class="budget-total-val">$25,000</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <div class="foot">
+    <span><b>NOW Foods × TikTok Shop</b> · Creator Challenge</span>
+    <div class="foot-mid"><span class="foot-dot"></span><span>One-Pager · v1.0</span></div>
+    <span>Source: official challenge doc</span>
+  </div>
+
+</div>
+</body>
+</html>
